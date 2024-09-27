@@ -259,9 +259,9 @@ public class BookService {
 					from = sdf.parse(curentDate);
 					Date to = sdf.parse(returnDate);
 					
-					int compare = from.compareTo(to);
+					int compare = from.compareTo(to); 
 					
-					if(compare > 0) {
+					if(compare > 0) { // 현재날짜가 반납일자보다 크다면 미반납 도서
 						System.out.println(book);
 					}
 
