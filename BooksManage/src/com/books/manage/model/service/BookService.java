@@ -55,6 +55,7 @@ public class BookService {
 			case 8 : displayNotReturnBooks(); break;
 			case 9 : displayRentCountBooks(); break;
 			case 0 : System.out.println("프로그램을 종료합니다.."); break;
+			default : System.out.println("올바른 메뉴번호를 입력하세요.."); break;
 			}
 			
 		} while(input != 0);
