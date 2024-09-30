@@ -98,6 +98,7 @@ public class BookService {
 	
 	public void displayBooks() {
 		int count = 1;
+		System.out.println("<도서 정보 조회>");
 		for(Book book : bookList) {
 			System.out.println(count + ". " + book);
 			count++;
@@ -239,6 +240,7 @@ public class BookService {
 	}
 	
 	public void displayRentBooks() {
+		System.out.println("<대여 도서 조회>");
 		for(Book book : bookList) {
 			if(book.isRentYn() == true) {
 				System.out.println(book);
@@ -247,6 +249,7 @@ public class BookService {
 	}
 	
 	public void displayNotReturnBooks() {
+		System.out.println("<미 반납 도서 조회>");
 		for(Book book : bookList) {
 			if(book.isRentYn() == true) {
 				Date date = new Date();
@@ -290,7 +293,7 @@ public class BookService {
 		Collections.sort(list);
 		
 		int count = 1;
-		
+		System.out.println("<도서 대여 횟수 조회>");
 		for( Entry<String, Integer> entry : bookMap.entrySet() ) {
 			if(entry.getValue() > 0) {
 				System.out.println(count + "위. 책 제목 : " + entry.getKey() + " / 대여횟수 : " + entry.getValue());
